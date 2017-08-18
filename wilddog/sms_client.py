@@ -3,14 +3,14 @@ import requests
 import time
 import hashlib
 
-NOTIFY_SEND_URL = "https://api.wilddog.com/sms/v1/{}/notify/send"
-CODE_SEND_URL = "https://api.wilddog.com/sms/v1/{}/code/send"
-CODE_CHECK_URL = "https://api.wilddog.com/sms/v1/{}/code/check"
-STATUS_URL = "https://api.wilddog.com/sms/v1/{}/status?"
-BALANCE_URL = "https://api.wilddog.com/sms/v1/{}/getBalance?"
+NOTIFY_SEND_URL = "https://sms.wilddog.com/api/v1/{}/notify/send"
+CODE_SEND_URL = "https://sms.wilddog.com/api/v1/{}/code/send"
+CODE_CHECK_URL = "https://sms.wilddog.com/api/v1/{}/code/check"
+STATUS_URL = "https://sms.wilddog.com/api/v1/{}/status?"
+BALANCE_URL = "https://sms.wilddog.com/api/v1/{}/getBalance?"
 
 headers = {
-    "User-Agent": "wilddog-sms-python/1.0.0"
+    "User-Agent": "wilddog-sms-python/1.0.1"
 }
 
 

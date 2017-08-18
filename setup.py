@@ -8,7 +8,7 @@ except ImportError:
 
 setup(
     name='wilddog-sms',
-    version='1.0.0',
+    version='1.0.1',
     description='A python sdk for wilddog sms',
     license="MIT",
     long_description="""\
