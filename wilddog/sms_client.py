@@ -10,7 +10,7 @@ STATUS_URL = "https://sms.wilddog.com/api/v1/{}/status?"
 BALANCE_URL = "https://sms.wilddog.com/api/v1/{}/getBalance?"
 
 headers = {
-    "User-Agent": "wilddog-sms-python/1.0.1"
+    "User-Agent": "wilddog-sms-python/1.0.2"
 }
 
 
@@ -30,10 +30,10 @@ class SmsClient:
 
     def send_code(self, mobile, templateId, params):
         if type(params) is None:
+            request_body = {"templateId": templateId, "mobile": mobile, "timestamp": "%d" % (time.time() * 1000)}
+        else:
             request_body = {"templateId": templateId, "mobile": mobile, "timestamp": "%d" % (time.time() * 1000),
                             "params": params}
-        else:
-            request_body = {"templateId": templateId, "mobile": mobile, "timestamp": "%d" % (time.time() * 1000)}
         sign = self._signature(request_body)
         request_body['signature'] = sign
         r = requests.post(url=CODE_SEND_URL.format(self.appid), data=request_body, headers=headers)
