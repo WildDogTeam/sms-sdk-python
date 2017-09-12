@@ -19,7 +19,7 @@ source code") for `sms-sdk-python`, and then run:
 ### 初始化
 
 ```python
-from wilddog.sms import SmsClient
+from wilddog import SmsClient
 
 smsclinet = SmsClient('YOUR_APPID', 'SMS_KEY')
 ```
